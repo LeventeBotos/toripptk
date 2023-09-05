@@ -12,6 +12,7 @@ const config: Config = {
       colors: {
         "whitee": "#FEFFFF",
         "primary": "#DEF2F1",
+        "secondary": "#DEF2F6",
         "accent": "#3AAFA9",
       },
       backgroundImage: {
