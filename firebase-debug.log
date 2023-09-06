@@ -28,3 +28,13 @@
 [debug] [2023-09-06T16:46:27.566Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:652194871392:web:fafe154370e45cb6712b05/config [none]
 [debug] [2023-09-06T16:46:28.460Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:652194871392:web:fafe154370e45cb6712b05/config 200
 [debug] [2023-09-06T16:46:28.460Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:652194871392:web:fafe154370e45cb6712b05/config {"projectId":"pptk10a","appId":"1:652194871392:web:fafe154370e45cb6712b05","storageBucket":"pptk10a.appspot.com","locationId":"europe-west","apiKey":"AIzaSyAZXdu9Q0NnUutN12x4LHzgu1quhhw2j9o","authDomain":"pptk10a.firebaseapp.com","messagingSenderId":"652194871392","measurementId":"G-DFP3XFVPJB"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
