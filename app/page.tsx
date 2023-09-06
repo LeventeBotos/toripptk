@@ -14,7 +14,7 @@ export default function Home() {
             <div className="h-10 absolute z-10 bottom-0 left-0 rounded-t-2xl bg-whitee w-full"></div>
           </div>
 
-          <Content tantargy={"hittan"} />
+          <Content tantargy={"tortenelem"} />
         </div>
       </div>
     </main>

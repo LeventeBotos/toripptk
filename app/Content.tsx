@@ -21,9 +21,17 @@ const Content: React.FC<any> = ({ tantargy }) => {
   }, []);
   return (
     <div className="flex flex-col px-10 gap-10">
+      {documents.length === 0 ? (
+        <div className="w-full text-2xl font-bold text-center flex flex-col justify-center h-96">
+          Még semmi sincs feltöltve
+        </div>
+      ) : (
+        <div className="hidden"></div>
+      )}
+
       {documents.map((doc, index) => (
         <a
-          href={doc.url}
+          href={`https://view.officeapps.live.com/op/embed.aspx?src=${doc.url}`}
           key={index}
           className="rounded-xl cursor-pointer bg-primary hover:bg-secondary transition-all ease-in-out duration-200 p-4 text-center text-xl gap-4 flex flex-col"
         >
@@ -36,9 +44,8 @@ const Content: React.FC<any> = ({ tantargy }) => {
           <iframe
             src={`https://view.officeapps.live.com/op/embed.aspx?src=${doc.url}`}
             className="w-full aspect-video rounded-xl"
+            loading="lazy"
           />
-          {/* <Viewer document={doc.url} /> */}
-          {/* <div className="rounded-xl aspect-video w-full bg-whitee"></div> */}
         </a>
       ))}
     </div>

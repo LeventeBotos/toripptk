@@ -1,0 +1,30 @@
+[debug] [2023-09-06T16:46:24.142Z] ----------------------------------------------------------------------
+[debug] [2023-09-06T16:46:24.148Z] Command:       /Users/leventebotos/.nvm/versions/node/v20.3.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-09-06T16:46:24.148Z] CLI Version:   12.4.0
+[debug] [2023-09-06T16:46:24.148Z] Platform:      darwin
+[debug] [2023-09-06T16:46:24.148Z] Node Version:  v20.3.1
+[debug] [2023-09-06T16:46:24.149Z] Time:          Wed Sep 06 2023 18:46:24 GMT+0200 (GMT+02:00)
+[debug] [2023-09-06T16:46:24.149Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-06T16:46:24.182Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-06T16:46:24.183Z] > authorizing via signed-in user (botos.levente2007@gmail.com)
+[debug] [2023-09-06T16:46:24.183Z] [iam] checking project pptk10a for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2023-09-06T16:46:24.183Z] > refreshing access token with scopes: []
+[debug] [2023-09-06T16:46:24.184Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-09-06T16:46:24.184Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-06T16:46:24.381Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-09-06T16:46:24.381Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-06T16:46:24.400Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pptk10a:testIamPermissions [none]
+[debug] [2023-09-06T16:46:24.400Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/pptk10a:testIamPermissions x-goog-quota-user=projects/pptk10a
+[debug] [2023-09-06T16:46:24.400Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pptk10a:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-09-06T16:46:25.272Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pptk10a:testIamPermissions 200
+[debug] [2023-09-06T16:46:25.272Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pptk10a:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-09-06T16:46:25.274Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pptk10a [none]
+[debug] [2023-09-06T16:46:25.620Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pptk10a 200
+[debug] [2023-09-06T16:46:25.620Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pptk10a {"projectId":"pptk10a","projectNumber":"652194871392","displayName":"Pptk10a","name":"projects/pptk10a","resources":{"hostingSite":"pptk10a","storageBucket":"pptk10a.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_072bea75-585d-4420-bd16-c68e4c545a93"}
+[debug] [2023-09-06T16:46:26.541Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/pptk10a/sites pageToken=&pageSize=10
+[debug] [2023-09-06T16:46:27.565Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/pptk10a/sites 200
+[debug] [2023-09-06T16:46:27.565Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/pptk10a/sites {"sites":[{"name":"projects/pptk10a/sites/pptk10a","defaultUrl":"https://pptk10a.web.app","appId":"1:652194871392:web:fafe154370e45cb6712b05","type":"DEFAULT_SITE"}]}
+[debug] [2023-09-06T16:46:27.566Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:652194871392:web:fafe154370e45cb6712b05/config [none]
+[debug] [2023-09-06T16:46:28.460Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:652194871392:web:fafe154370e45cb6712b05/config 200
+[debug] [2023-09-06T16:46:28.460Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:652194871392:web:fafe154370e45cb6712b05/config {"projectId":"pptk10a","appId":"1:652194871392:web:fafe154370e45cb6712b05","storageBucket":"pptk10a.appspot.com","locationId":"europe-west","apiKey":"AIzaSyAZXdu9Q0NnUutN12x4LHzgu1quhhw2j9o","authDomain":"pptk10a.firebaseapp.com","messagingSenderId":"652194871392","measurementId":"G-DFP3XFVPJB"}

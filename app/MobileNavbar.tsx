@@ -27,10 +27,7 @@ const MobileNavbar = () => {
           href={doc.url}
           className=" px-3 bg-primary active:bg-accent active:text-white rounded-xl  flex flex-col justify-evenly items-center h-12"
         >
-          <p>
-            {String(doc.name[0]).toUpperCase()}
-            {String(doc.name).slice(1)}
-          </p>
+          <p>{String(doc.name)}</p>
         </a>
       ))}
     </div>

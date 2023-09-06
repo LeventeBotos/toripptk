@@ -27,10 +27,7 @@ const DesktopNavbar = () => {
           href={doc.url}
           className="w-2/3 bg-primary hover:bg-accent hover:text-white rounded-xl transition-all ease-in-out duration-200 flex flex-col justify-evenly items-center h-12"
         >
-          <p>
-            {String(doc.name[0]).toUpperCase()}
-            {String(doc.name).slice(1)}
-          </p>
+          <p>{String(doc.name)}</p>
         </a>
       ))}
     </div>
