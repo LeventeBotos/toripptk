@@ -38,3 +38,102 @@
 
    We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
 
+[debug] [2023-09-06T16:46:36.096Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "europe-west1"
+      },
+      "site": "pptk10a",
+      "rewrites": [],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "/favicon.ico",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "image/x-icon"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "/favicon.ico/route"
+            }
+          ]
+        },
+        {
+          "source": "**/*.[jt]s",
+          "headers": [
+            {
+              "key": "Set-Cookie",
+              "value": "__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoicHB0azEwYSIsImFwcElkIjoiMTo2NTIxOTQ4NzEzOTI6d2ViOmZhZmUxNTQzNzBlNDVjYjY3MTJiMDUiLCJzdG9yYWdlQnVja2V0IjoicHB0azEwYS5hcHBzcG90LmNvbSIsImxvY2F0aW9uSWQiOiJldXJvcGUtd2VzdCIsImFwaUtleSI6IkFJemFTeUFaWGR1OVEwTm5VdXROMTJ4NExIemd1MXF1aGh3Mmo5byIsImF1dGhEb21haW4iOiJwcHRrMTBhLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiNjUyMTk0ODcxMzkyIiwibWVhc3VyZW1lbnRJZCI6IkctREZQM1hGVlBKQiJ9fQ; SameSite=Strict; Expires=2025-08-01T03:26:36.096Z; Path=/;"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "public": ".firebase/pptk10a/hosting",
+      "webFramework": "next"
+    }
+  ]
+}
+[info] 
+[info] === Deploying to 'pptk10a'...
+[info] 
+[info] i  deploying storage, firestore, hosting 
+[debug] [2023-09-06T16:46:36.097Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pptk10a [none]
+[debug] [2023-09-06T16:46:36.383Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pptk10a 200
+[debug] [2023-09-06T16:46:36.383Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pptk10a {"projectId":"pptk10a","projectNumber":"652194871392","displayName":"Pptk10a","name":"projects/pptk10a","resources":{"hostingSite":"pptk10a","storageBucket":"pptk10a.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_072bea75-585d-4420-bd16-c68e4c545a93"}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2023-09-06T16:46:36.387Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/pptk10a:test [none]
+[debug] [2023-09-06T16:46:36.387Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/pptk10a:test [omitted]
+[debug] [2023-09-06T16:46:37.357Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/pptk10a:test 200
+[debug] [2023-09-06T16:46:37.357Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/pptk10a:test {}
+[info] ✔  firebase.storage: rules file storage.rules compiled successfully 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2023-09-06T16:46:37.360Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/pptk10a:test [none]
+[debug] [2023-09-06T16:46:37.360Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/pptk10a:test [omitted]
+[debug] [2023-09-06T16:46:37.578Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/pptk10a:test 200
+[debug] [2023-09-06T16:46:37.579Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/pptk10a:test {}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2023-09-06T16:46:37.588Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pptk10a/versions [none]
+[debug] [2023-09-06T16:46:37.589Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pptk10a/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next"}}
+[debug] [2023-09-06T16:46:38.781Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pptk10a/versions 200
+[debug] [2023-09-06T16:46:38.781Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pptk10a/versions {"name":"projects/652194871392/sites/pptk10a/versions/09f768f6a569f7a5","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next"}}
+[debug] [2023-09-06T16:46:38.783Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/pptk10a/releases pageSize=10&pageToken=
+[debug] [2023-09-06T16:46:39.006Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/pptk10a/releases 200
+[debug] [2023-09-06T16:46:39.006Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/pptk10a/releases {"releases":[{"name":"projects/pptk10a/releases/cloud.firestore","rulesetName":"projects/pptk10a/rulesets/d0415daf-ba4d-46f6-8dce-1aead7d0ca15","createTime":"2023-09-05T19:25:48.883017Z","updateTime":"2023-09-05T20:54:29.332098Z"},{"name":"projects/pptk10a/releases/firebase.storage/pptk10a.appspot.com","rulesetName":"projects/pptk10a/rulesets/2bb14168-261e-468f-b655-a0e669940dd2","createTime":"2023-09-05T19:26:35.752762Z","updateTime":"2023-09-05T20:54:28.960557Z"}]}
+[debug] [2023-09-06T16:46:39.007Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/pptk10a/rulesets/2bb14168-261e-468f-b655-a0e669940dd2 [none]
+[debug] [2023-09-06T16:46:39.403Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/pptk10a/rulesets/2bb14168-261e-468f-b655-a0e669940dd2 200
+[debug] [2023-09-06T16:46:39.403Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/pptk10a/rulesets/2bb14168-261e-468f-b655-a0e669940dd2 [omitted]
+[info] i  storage: latest version of storage.rules already up to date, skipping upload... 
+[info] i  firestore: deploying indexes... 
+[debug] [2023-09-06T16:46:39.407Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/pptk10a/releases pageSize=10&pageToken=
+[debug] [2023-09-06T16:46:39.409Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/pptk10a/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2023-09-06T16:46:39.689Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/pptk10a/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2023-09-06T16:46:39.689Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/pptk10a/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2023-09-06T16:46:39.690Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/pptk10a/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2023-09-06T16:46:39.778Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/pptk10a/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2023-09-06T16:46:39.778Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/pptk10a/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/pptk10a/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] ✔  firestore: deployed indexes in firestore.indexes.json successfully for (default) database 
+[debug] [2023-09-06T16:46:40.220Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/pptk10a/releases 200
+[debug] [2023-09-06T16:46:40.220Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/pptk10a/releases {"releases":[{"name":"projects/pptk10a/releases/cloud.firestore","rulesetName":"projects/pptk10a/rulesets/d0415daf-ba4d-46f6-8dce-1aead7d0ca15","createTime":"2023-09-05T19:25:48.883017Z","updateTime":"2023-09-05T20:54:29.332098Z"},{"name":"projects/pptk10a/releases/firebase.storage/pptk10a.appspot.com","rulesetName":"projects/pptk10a/rulesets/2bb14168-261e-468f-b655-a0e669940dd2","createTime":"2023-09-05T19:26:35.752762Z","updateTime":"2023-09-05T20:54:28.960557Z"}]}
+[debug] [2023-09-06T16:46:40.221Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/pptk10a/rulesets/d0415daf-ba4d-46f6-8dce-1aead7d0ca15 [none]
+[debug] [2023-09-06T16:46:40.910Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/pptk10a/rulesets/d0415daf-ba4d-46f6-8dce-1aead7d0ca15 200
+[debug] [2023-09-06T16:46:40.910Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/pptk10a/rulesets/d0415daf-ba4d-46f6-8dce-1aead7d0ca15 [omitted]
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
+[info] i  hosting[pptk10a]: beginning deploy... 
+[info] i  hosting[pptk10a]: found 45 files in .firebase/pptk10a/hosting 
+[debug] [2023-09-06T16:46:40.932Z] [hosting] uploading with 200 concurrency
