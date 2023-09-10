@@ -20,7 +20,7 @@ const Content: React.FC<any> = ({ tantargy }) => {
     };
   }, []);
   return (
-    <div className="flex flex-col px-10 gap-10">
+    <div className="flex flex-col p-10  gap-10">
       {documents.length === 0 ? (
         <div className="w-full text-2xl font-bold text-center flex flex-col justify-center h-96">
           Még semmi sincs feltöltve

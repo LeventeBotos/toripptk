@@ -1,0 +1,37 @@
+[debug] [2023-09-06T20:01:02.932Z] ----------------------------------------------------------------------
+[debug] [2023-09-06T20:01:02.934Z] Command:       /Users/leventebotos/.nvm/versions/node/v20.3.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-09-06T20:01:02.934Z] CLI Version:   12.4.0
+[debug] [2023-09-06T20:01:02.934Z] Platform:      darwin
+[debug] [2023-09-06T20:01:02.934Z] Node Version:  v20.3.1
+[debug] [2023-09-06T20:01:02.934Z] Time:          Wed Sep 06 2023 22:01:02 GMT+0200 (GMT+02:00)
+[debug] [2023-09-06T20:01:02.934Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-06T20:01:02.967Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-06T20:01:02.967Z] > authorizing via signed-in user (rollingroyalshosting@gmail.com)
+[debug] [2023-09-06T20:01:02.967Z] [iam] checking project pptk10a for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2023-09-06T20:01:02.968Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pptk10a:testIamPermissions [none]
+[debug] [2023-09-06T20:01:02.968Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/pptk10a:testIamPermissions x-goog-quota-user=projects/pptk10a
+[debug] [2023-09-06T20:01:02.968Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pptk10a:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-09-06T20:01:04.083Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pptk10a:testIamPermissions 200
+[debug] [2023-09-06T20:01:04.083Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pptk10a:testIamPermissions {}
+[debug] [2023-09-06T20:01:04.083Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project pptk10a:
+
+  datastore.indexes.create
+  datastore.indexes.delete
+  datastore.indexes.list
+  datastore.indexes.update
+  firebase.projects.get
+  firebasehosting.sites.update
+  firebaserules.releases.create
+  firebaserules.releases.update
+  firebaserules.rulesets.create
+[debug] [2023-09-06T20:01:04.084Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pptk10a [none]
+[debug] [2023-09-06T20:01:04.589Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pptk10a 403
+[debug] [2023-09-06T20:01:04.589Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pptk10a {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-09-06T20:01:04.590Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-09-06T20:01:04.709Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project pptk10a. Please make sure the project exists and your account has permission to access it.
