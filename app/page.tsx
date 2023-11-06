@@ -1,11 +1,13 @@
 import Content from "./Content";
 import DesktopNavbar from "./DesktopNavbar";
+import Footer from "./Footer";
 import MobileNavbar from "./MobileNavbar";
+import { V0 } from "./V0";
 
 export default function Home() {
   return (
     <main className="flex bg-whitee flex-col ">
-      <MobileNavbar />
+      {/* <MobileNavbar />
       <div className="flex flex-row">
         <DesktopNavbar />
         <div className="flex absolute top-0 right-0 w-full md:w-2/3 flex-col">
@@ -16,7 +18,9 @@ export default function Home() {
 
           <Content tantargy={"tortenelem"} />
         </div>
-      </div>
+      </div> */}
+      <V0 tantargy="tortenelem" name="Történelem" />
+      <Footer />
     </main>
   );
 }

@@ -2,8 +2,13 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-[#1f1f1f] text-white h-96 flex flex-col">
-      <p>A weboldalt készítette: Botos Levente</p>
+    <div className="w-full h-24 flex flex-col justify-evenly text-white text-center font-bold bg-black ">
+      <p>
+        A weboldalt készítette:{" "}
+        <a href="https://leventebotos.github.io" className="gradient">
+          Botos Levente
+        </a>
+      </p>
     </div>
   );
 };

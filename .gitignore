@@ -68,3 +68,5 @@ next-env.d.ts
 .firebase/pptk10a/hosting/_next/static/media/b967158bc7d7a9fb-s.woff2
 .firebase/pptk10a/hosting/_next/static/media/c0f5ec5bbf5913b7-s.woff2
 .firebase/pptk10a/hosting/_next/static/media/d1d9458b69004127-s.woff2
+app/Firebase.tsx
+public/pptk/
