@@ -6,7 +6,7 @@ import { V0 } from "./V0";
 
 export default function Home() {
   return (
-    <main className="flex bg-whitee flex-col ">
+    <main className="flex bg-white dark:bg-black flex-col ">
       {/* <MobileNavbar />
       <div className="flex flex-row">
         <DesktopNavbar />

@@ -1,10 +1,14 @@
 "use client";
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/Gw9b126vxJf
- */
+
 import { Button } from "@/components/ui/button";
-import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
+import {
+  Timestamp,
+  collection,
+  doc,
+  onSnapshot,
+  orderBy,
+  query,
+} from "firebase/firestore";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { db } from "./Firebase";
@@ -26,12 +30,13 @@ export const V0: React.FC<{ tantargy: string; name: string }> = ({
     const unsubscribe = onSnapshot(queryRef, (snapshot: any) => {
       const updatedDocuments = snapshot.docs.map((doc: any) => doc.data());
       setDocuments(updatedDocuments);
+      console.log(updatedDocuments);
     });
 
     return unsubscribe;
   }, []);
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-800">
+    <div className="min-h-screen bg-white dark:bg-[#111111] text-[#111111] dark:text-white">
       <Navbar />
       <div className="container mx-auto px-6 py-8">
         <h3 className="text-gray-700 dark:text-white text-3xl font-medium">
@@ -49,12 +54,12 @@ export const V0: React.FC<{ tantargy: string; name: string }> = ({
             <a
               key={index}
               href={`https://view.officeapps.live.com/op/embed.aspx?src=${document.url}`}
-              className="w-full max-w-xs mx-auto rounded-md shadow-md overflow-hidden"
+              className="w-full max-w-xs mx-auto rounded-md shadow-md overflow-hidden dark:bg-[#191919]"
             >
               {enabled.includes(index) ? (
                 <iframe
                   src={`https://view.officeapps.live.com/op/embed.aspx?src=${document.url}`}
-                  className="w-full aspect-video rounded-xl"
+                  className="w-full aspect-video rounded-xl "
                   loading="lazy"
                 />
               ) : (
@@ -63,10 +68,10 @@ export const V0: React.FC<{ tantargy: string; name: string }> = ({
                     e.preventDefault();
                     setEnabled([...enabled, index]);
                   }}
-                  className="w-full aspect-video text-4xl md:text-7xl bg-gray-100 rounded-lg text-white flex flex-col justify-evenly items-center"
+                  className="w-full aspect-video text-4xl md:text-7xl bg-gray-100 dark:bg-[#333333] rounded-lg text-white flex flex-col justify-evenly items-center"
                 >
                   <svg
-                    className=" h-10 w-10  text-black"
+                    className=" h-10 w-10 dark:text-[#555555] text-black"
                     fill="none"
                     height="24"
                     stroke="currentColor"
@@ -86,7 +91,8 @@ export const V0: React.FC<{ tantargy: string; name: string }> = ({
                   {document.title}
                 </h2>
                 <span className="text-gray-500 dark:text-gray-200 text-sm">
-                  20 Slides
+                  {/* {document.date} */}
+                  {new Date(document.date.seconds * 1000).toDateString()}
                 </span>
               </div>
             </a>

@@ -22,7 +22,7 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <nav className="bg-white dark:bg-gray-800 shadow">
+    <nav className="bg-white dark:bg-[#111111] shadow">
       <div className="container mx-auto px-6 py-3">
         <div className="flex flex-row justify-between items-center">
           <div className="flex justify-between items-center">
@@ -59,7 +59,7 @@ const Navbar = () => {
             {documents.map((doc, index) => (
               <Link
                 key={index}
-                className="my-1 text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 mx-2 md:mx-4 md:my-0"
+                className="my-1 text-gray-800 dark:text-gray-200 ease-in-out duration-300 hover:text-blue-500 dark:hover:text-blue-400 mx-2 md:mx-4 md:my-0"
                 href={doc.url}
               >
                 {doc.name}
